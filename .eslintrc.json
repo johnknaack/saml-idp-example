@@ -1,0 +1,33 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+      },
+    "rules": {
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "linebreak-style": ["off", "unix"],
+        "no-use-before-define": ["error", {"functions": false, "classes": true, "variables": false}],
+        "no-console": ["off"],
+        "new-cap": ["off"],
+        "consistent-return": ["off"],
+        "arrow-parens": ["off"],
+        "max-len": ["error", {"code": 175}],
+        "no-plusplus": ["off"],
+        "no-continue": ["off"],
+        "func-names": ["off"],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            }
+        ]
+    }
+}
