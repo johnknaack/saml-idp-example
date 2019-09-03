@@ -9,7 +9,7 @@ const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/auth');
 const idpRoutes = require('./routes/idp');
 
-const PORT = 7001;
+const PORT = process.env.PORT || 7001;
 
 const app = new express();
 
